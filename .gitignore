@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+venv/
+
+# Poetry cache
+poetry.toml
+
+# Data folders
+data/raw/
+data/interim/
+data/debug/
+data/processed/
+
+# CSV output
+*.csv
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Debug crawler
+screenshots/
+debug/
+
+data/ip2location/
+*.BIN

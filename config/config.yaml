@@ -1,0 +1,13 @@
+mongo:
+  uri: "mongodb://127.0.0.1:27017"
+  db: "glamira_project"
+  raw_collection: "raw_data"
+  ip_collection: "ip_locations"
+
+ip2location:
+  bin_path: "data/ip2location/IP-COUNTRY-REGION-CITY.BIN"
+
+processing:
+  batch_size: 1000
+  export_csv: true
+  csv_path: "data/ip_locations.csv"
