@@ -219,7 +219,15 @@ def ensure_output_file():
     output_path = Path(OUTPUT_FILE)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    need_header = False
+
     if not output_path.exists():
+        need_header = True
+    else:
+        if output_path.stat().st_size == 0:
+            need_header = True
+
+    if need_header:
         with open(output_path, "w", encoding="utf-8", newline="") as f:
             writer = csv.writer(f)
             writer.writerow([
