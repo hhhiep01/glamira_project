@@ -52,7 +52,7 @@ def main():
     if docs_to_upsert:
         upsert_ip_locations(out_col, docs_to_upsert)
         
-    print("✅ Pipeline finished")
+    print("Pipeline finished")
     print("Processed raw records:", processed)
     print("Unique cleaned IPs:", unique_ips)
     print("Output collection:", cfg["mongo"]["ip_collection"])

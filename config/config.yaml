@@ -3,6 +3,7 @@ mongo:
   db: "glamira_project"
   raw_collection: "raw_data"
   ip_collection: "ip_locations"
+  product_collection: "product_names"
 
 ip2location:
   bin_path: "data/ip2location/IP-COUNTRY-REGION-CITY.BIN"
@@ -11,3 +12,20 @@ processing:
   batch_size: 1000
   export_csv: true
   csv_path: "data/ip_locations.csv"
+
+gcp:
+  project_id: "todo-459814"
+  bucket_name: "glamira-raw-data-bucket"
+  bq_dataset: "glamira_raw"
+  bq_table: "product_names_raw"
+
+export:
+  source_collection_keys:
+    - "raw_collection"
+    - "product_collection"
+    - "ip_collection"
+  batch_size: 1000
+  gcs_prefix: "raw"
+
+logging:
+  level: "INFO"
